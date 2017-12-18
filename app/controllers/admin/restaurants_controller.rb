@@ -1,7 +1,7 @@
 class Admin::RestaurantsController < ApplicationController
   before_action :authenticate_user!
   before_action :authenticate_admin
-  before_action :set_restaurant, only: [:edit, :update, :show]
+  before_action :set_restaurant, only: [:edit, :update, :show, :destroy]
   
   def index
     @restaurants = Restaurant.all
@@ -38,6 +38,12 @@ class Admin::RestaurantsController < ApplicationController
 
   def show
 
+  end
+
+  def destroy
+    @restaurant.destroy
+    flash[:alert] = "Restaurant was deleted successfully."
+    redirect_to admin_restaurants_path
   end
 
   private
