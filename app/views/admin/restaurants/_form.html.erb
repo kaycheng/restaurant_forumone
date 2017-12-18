@@ -1,0 +1,34 @@
+<% if @restaurant.errors.any? %>
+<ul>
+  <h2>We have some errors here!</h2>
+  <% @restaurant.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_for [:admin, @restaurant] do |f| %>
+  <div class="form-group">
+    <%= f.label :name, "Name" %>
+    <%= f.text_field :name, placeholder: "name", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :tel, "Tel" %>
+    <%= f.text_field :tel, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :address, "Address" %>
+    <%= f.text_field :address, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :opening_hours, "Opening Hours" %>
+    <%= f.text_field :opening_hours, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, "Description" %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.submit %>
+  </div>
+<% end %>
