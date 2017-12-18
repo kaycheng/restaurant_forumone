@@ -1,7 +1,7 @@
 class Admin::RestaurantsController < ApplicationController
   before_action :authenticate_user!
   before_action :authenticate_admin
-  before_action :set_restaurant, only: [:edit, :update]
+  before_action :set_restaurant, only: [:edit, :update, :show]
   
   def index
     @restaurants = Restaurant.all
@@ -34,6 +34,10 @@ class Admin::RestaurantsController < ApplicationController
       flash[:alert] = "There was some errors."
       render :edit
     end
+  end
+
+  def show
+
   end
 
   private
