@@ -31,7 +31,7 @@ class Admin::RestaurantsController < ApplicationController
       flash[:notice] = "Restaurant was updated successfully."
       redirect_to admin_restaurants_path
     else
-      flash[:alert] = "There was some errors."
+      flash.now[:alert] = "There was some errors."
       render :edit
     end
   end
