@@ -4,5 +4,6 @@
   <p><strong>Address: </strong><%= @restaurant.address %></p>
   <p><strong>Opening hours: </strong><%= @restaurant.opening_hours %></p>
   <p><strong>Description: </strong><%= @restaurant.description %></p>
+  <%= image_tag @restaurant.image, width: "500px" %><br>
   <%= link_to "Back", admin_restaurants_path %>
 </div>
