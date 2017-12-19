@@ -3,7 +3,7 @@
     <div class="col-md-10 col-md-offset-1">
       <% if @restaurant.errors.any? %>
       <ul>
-        <h3>We have some errors here!</h3>
+        <h2>We have some errors here!</h2>
         <% @restaurant.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
