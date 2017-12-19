@@ -10,11 +10,9 @@
 
   <body>
     <%= render 'layouts/navigation' %>
-    <p class="notcie"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    
-
-    <%= yield %>
+    <%= render 'layouts/flash' %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
