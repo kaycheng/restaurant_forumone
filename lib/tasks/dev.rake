@@ -8,7 +8,8 @@ namespace :dev do
         tel: FFaker::PhoneNumber.short_phone_number,
         opening_hours: FFaker::Time.datetime,
         address: FFaker::Address.street_address,
-        description: FFaker::Lorem.paragraph
+        description: FFaker::Lorem.paragraph,
+        category: Category.all.sample
         )
     end
     puts "have create fake restaurants."
