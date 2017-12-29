@@ -2,7 +2,7 @@
   list-style: none;
 }
 
-.center {
+.text-center {
   text-align: center;
 }
 
@@ -31,3 +31,20 @@
   display: inline-block;
 }
 
+.avatar-img {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+
+}
+
+.avatar-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.avatar-info {
+  display: inline-block;
+  margin-left: 20px;
+}

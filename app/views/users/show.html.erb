@@ -1,16 +1,18 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
-      <div class="col-md-4">
-        <%= image_tag @user.avatar, height: "250px" if @user.avatar? %>
-      </div>
-      <div class="col-md-8">
-        <h3><%= @user.name %></h3>
-        <p><%= @user.email %></p>
-        <p><%= simple_format @user.intro %></p>
-        <% if current_user == @user %>
-          <%= link_to 'Edit Profile', edit_user_path(@user), class: "btn btn-primary" %>
-        <% end %>
+      <div class="text-center">
+        <div class="avatar-img">
+          <%= image_tag @user.avatar if @user.avatar? %>
+        </div>
+        <div class="avatar-info">
+          <h3><%= @user.name %></h3>
+          <p><%= @user.email %></p>
+          <p><%= simple_format @user.intro %></p>
+          <% if current_user == @user %>
+            <%= link_to 'Edit Profile', edit_user_path(@user), class: "btn btn-primary" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
