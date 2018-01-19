@@ -6,6 +6,14 @@
   text-align: center;
 }
 
+.center {
+  text-align: center;
+}
+
+.page-header {
+  border-bottom: none;
+}
+
 .restaurant-item {
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -31,20 +39,31 @@
   display: inline-block;
 }
 
-.avatar-img {
+.my-restaurant {
   display: inline-block;
-  width: 200px;
-  height: 200px;
-
+  text-align: center;
+  padding: 7px 7px 0 7px;
 }
 
-.avatar-img img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+.my-restaurant > div {
+  height: 60px;
 }
 
-.avatar-info {
-  display: inline-block;
-  margin-left: 20px;
+.my-restaurant img {
+  max-height: 100%;
 }
+
+.panel a:hover .my-restaurant {
+  background-color: #eee;
+}
+
+a, a:link, a:visited, a:focus, a:hover, a:active {
+  text-decoration: none; 
+}
+
+.clearfix {
+  clear: both;
+  border-bottom: 1px solid #ccc;
+  margin: 50px;
+}
+
