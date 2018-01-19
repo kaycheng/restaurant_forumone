@@ -27,7 +27,8 @@ namespace :dev do
       User.create!(
         name: user_name,
         email: "#{user_name}@example.com",
-        password: "12345678"
+        password: "12345678",
+        avatar: File.open(Rails.root.join("lib/assets/images/logo.jpeg"))
         )
     end
     puts "have created fake users."
